@@ -2,6 +2,7 @@ var locale = 'ko-KO';
 var clock = {
 	hours: document.querySelector('.m-clock .hours').firstChild,
 	minutes: document.querySelector('.m-clock .minutes').firstChild,
+	seconds: document.querySelector('.m-clock .seconds').firstChild,
 	date: document.querySelector('.m-date').firstChild
 };
 render();
@@ -17,13 +18,14 @@ function render() {
 	var minutes = now.getMinutes();
 	var seconds = now.getSeconds();
 
+	setTimeout(render, 1000 - now.getMilliseconds());
+
 	clock.hours.data = hours;
 	clock.minutes.data = padZero(minutes);
+	clock.seconds.data = padZero(seconds);
 	clock.date.data = now.toLocaleString(locale, {
 		day: 'numeric',
 		month: 'long',
 		year: 'numeric'
 	});
-
-	setTimeout(render, (60 - seconds) * 1000);
 }

@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Tab</title>
 <style>
 * {
 	margin: 0;
@@ -42,7 +41,10 @@ body {
 	background: #fff;
 	transition: background 0.2s cubic-bezier(0.2,0,.03,1);
 }
-.m-clock .minutes {
+.m-clock .hours {
+	font-size: 4rem;
+}
+.m-clock .seconds {
 	color: #db3d2a;
 }
 .m-date {
@@ -90,6 +92,7 @@ body {
 	<div class="m-clock">
 		<span class="hours"> </span>
 		<span class="minutes"> </span>
+		<span class="seconds"> </span>
 	</div>
 	<div class="m-date"> </div>
 </body>
