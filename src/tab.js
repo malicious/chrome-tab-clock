@@ -1,4 +1,4 @@
-var locale = 'de-DE';
+var locale = 'ko-KO';
 var clock = {
 	hours: document.querySelector('.m-clock .hours').firstChild,
 	minutes: document.querySelector('.m-clock .minutes').firstChild,
