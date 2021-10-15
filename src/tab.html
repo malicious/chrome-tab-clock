@@ -12,8 +12,6 @@ html {
 
 	font-size: 15px;
 	font-family: sans-serif;
-	color: #eee;
-	background-color: black;
 	cursor: default;
 	-webkit-user-select: none;
 }
@@ -36,8 +34,7 @@ body {
 	width: 100%;
 }
 .m-clock:active {
-	/*-webkit-text-stroke: 5px;*/
-	background: #111;
+	background: #eee;
 	transition: background 0.2s cubic-bezier(0.2,0,.03,1);
 }
 .m-clock .seconds {
@@ -57,6 +54,16 @@ body {
 	font-weight: 200;
 	color: #999;
 	text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+	html {
+		color: #eee;
+		background-color: black;
+	}
+	.m-clock:active {
+		background: #111;
+	}
 }
 </style>
 <script defer src="tab.js"></script>
