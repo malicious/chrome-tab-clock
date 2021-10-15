@@ -20,7 +20,7 @@ function render() {
 
 	setTimeout(render, 1000 - now.getMilliseconds());
 
-	clock.hours.data = hours;
+	clock.hours.data = padZero(hours);
 	clock.minutes.data = padZero(minutes);
 	clock.seconds.data = padZero(seconds);
 	clock.date.data = now.toLocaleString(locale, {

@@ -21,30 +21,30 @@ body {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
 }
 
 /*
  * Clock
  */
 .m-clock {
-	font-size: 13rem;
+	font-size: 200px;
 	font-family: 'Helvetica Neue', 'FrutigerLTStd-UltraBlack', 'Myriad Pro Light', sans-serif;
 	font-weight: 100;
 	text-rendering: geometricPrecision;
 	transition: background 0.4s ease;
 	text-align: center;
-	padding: 0 22px 4px;
+	width: 100%;
 }
 .m-clock:active {
 	/*-webkit-text-stroke: 5px;*/
-	background: #fff;
+	background: #111;
 	transition: background 0.2s cubic-bezier(0.2,0,.03,1);
 }
-.m-clock .hours {
-	font-size: 4rem;
-}
 .m-clock .seconds {
+	font-size: 100px;
+	font-weight: 200;
+}
+.m-clock .minutes {
 	color: #db3d2a;
 }
 .m-date {
@@ -53,7 +53,7 @@ body {
 	bottom: 20px;
 	width: 100%;
 
-	font-size: 1.75rem;
+	font-size: 24px;
 	font-weight: 200;
 	color: #999;
 	text-align: center;
