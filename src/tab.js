@@ -43,9 +43,9 @@ function render() {
 	// This re-renders the frame at the top of each second
 	// setTimeout(render, 1000 - now.getMilliseconds());
 	// This would re-render the frame every frame
-	window.requestAnimationFrame(render)
+	// window.requestAnimationFrame(render)
 	// Re-render at the top of every 10th of a second, for the sub-second string(s)
-	// setTimeout(render, 100 - (now.getMilliseconds() % 100));
+	setTimeout(render, 100 - (now.getMilliseconds() % 100));
 
 	var hours_str = padZero(now.getHours());
 	var minutes_str = padZero(now.getMinutes());
@@ -59,7 +59,7 @@ function render() {
 	month = now.toLocaleString('en-US', {
 		month: 'short'
 	});
-	subsecond_str = padZero(now.getMilliseconds(), 3)
+	subsecond_str = Math.round(now.getMilliseconds() / 100)
 
 	clock.date.data = toTimeScopeId(now) +
 		`-${month}-${padZero(now.getDate())}` +
